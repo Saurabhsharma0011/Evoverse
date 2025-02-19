@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 0%;
+  --foreground: 0 0% 100%;
+  --card: 0 0% 0%;
+  --card-foreground: 0 0% 100%;
+  --popover: 0 0% 0%;
+  --popover-foreground: 0 0% 100%;
+  --primary: 24 95% 53%;
+  --primary-foreground: 0 0% 0%;
+  --secondary: 0 0% 9%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 0 0% 9%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --accent: 0 0% 9%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 0 0% 9%;
+  --input: 0 0% 9%;
+  --ring: 24 95% 53%;
+  --radius: 0.5rem;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+/* Update these styles in your globals.css */
+
+/* Remove the previous #__next::before overlay */
+#__next::before {
+  content: none;
+}
+
+/* Update section backgrounds to be more transparent */
+section {
+  position: relative;
+  z-index: 1;
+  background: transparent;
+}
+
+/* Update glass effect to be more subtle */
+.glass-effect {
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(249, 115, 22, 0.1);
+}
+
+/* Update card backgrounds */
+.bg-card {
+  background: rgba(0, 0, 0, 0.3) !important;
+  backdrop-filter: blur(8px);
+}
+
+/* Remove section overlay */
+.section-overlay::before {
+  content: none;
+}
+
+/* Keep other styles the same */
+

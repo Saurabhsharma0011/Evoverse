@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Previous CSS variables remain the same... */
+}
+
+html,
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: black;
+}
+
+body {
+  color: white;
+  position: relative;
+}
+
+#__next {
+  min-height: 100vh;
+  background-color: black;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ensure background covers everything */
+.relative.min-h-screen {
+  min-height: 100vh;
+  background-color: transparent !important;
+}
+
+/* Add smooth transition for background elements */
+.fixed {
+  transition: transform 0.1s ease-out;
+}
+
+/* Remove any default margins that might cause white space */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Update section backgrounds to be more transparent */
+section {
+  position: relative;
+  z-index: 1;
+  background: transparent !important;
+}
+
+/* Footer specific styles */
+footer {
+  position: relative;
+  z-index: 1;
+  background: transparent !important;
+}
+
+/* Update glass effect to be more subtle */
+.glass-effect {
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(249, 115, 22, 0.1);
+}
+
+/* Update card backgrounds */
+.bg-card {
+  background: rgba(0, 0, 0, 0.3) !important;
+  backdrop-filter: blur(8px);
+}
+
+/* Ensure content is above the background */
+main {
+  position: relative;
+  z-index: 1;
+  background: transparent !important;
+}
+

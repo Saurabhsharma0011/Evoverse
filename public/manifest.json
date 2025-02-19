@@ -1,0 +1,22 @@
+{
+  "name": "EvoVerse AI",
+  "short_name": "EvoVerse",
+  "description": "AI-powered multi-chain intelligence & advanced market insights platform",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#f97316",
+  "icons": [
+    {
+      "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/evo_new_logo_orng-removebg-preview-lrzg4pUuPGkUKZRaVCLj3qkOv2F8t9.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/evo_new_logo_orng-removebg-preview-lrzg4pUuPGkUKZRaVCLj3qkOv2F8t9.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
+
