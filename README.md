@@ -1,57 +1,77 @@
-# Stratlens - AI Audit Agent Framework for Solana
+# 🧠 Stratlens — AI Audit Agent Framework for Solana
 
-Stratlens is an advanced, modular AI Audit Agent Framework designed specifically for the Solana ecosystem. It empowers developers, founders, and communities to deploy customizable AI agents that conduct secure, data-driven audits for tokens without requiring wallet connections or paid tools.
+[![Website](https://img.shields.io/badge/Website-stratlens.xyz-blue)](https://stratlens.xyz)
+[![Twitter](https://img.shields.io/badge/Twitter-@StratlensAI-1DA1F2?logo=twitter)](https://x.com/StratlensAI)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-## 🌐 Key Features:
+Stratlens is an advanced, modular AI Audit Agent Framework designed for the Solana ecosystem. It empowers developers, founders, and DAOs to deploy token-specific audit agents capable of generating real-time trust scores and human-readable risk reports using live data and custom prompts — without requiring wallet connections or manual intervention.
 
-* **Customizable AI Agents:** Design audit agents with tailored logic for different token types (meme, DeFi, utility).
-* **Real-Time Data Integration:** Pulls live data from the Solana chain, BirdEye APIs, and token tools.
-* **Human-Readable Audit Reports:** Generates exportable reports (Markdown/PDF) with detailed recommendations.
-* **Trust Scoring System:** Provides a clear trust score (0-100) based on risk profiling logic.
-* **No Wallet Connection Required:** Secure auditing without user wallet interactions.
+---
 
-## 🚀 Getting Started:
+## ⚡ Key Features
 
-* Clone this repository.
-* Customize your audit agent logic using the Prompt Editor.
-* Deploy on Vercel, Netlify, or your preferred cloud platform.
-* Use it for internal dashboards, pre-launch verification, or community audits.
+* **Customizable AI Agents**: Design token-specific audit logic tailored for various token types (meme, DeFi, infrastructure, utility).
+* **Live On-Chain and API Data**: Integrates seamlessly with BirdEye, SPL registry, and Solana token metadata.
+* **Comprehensive Reports**: Generates clean, human-readable audit reports in Markdown or PDF format.
+* **Dynamic Trust Scoring**: Calculates a 0–100 trust score using a modular, rule-based engine.
+* **Secure, Wallet-Free**: Operates server-side without any Web3 connection, ensuring complete security.
+* **Proven Through Hackathons**: Refined across multiple real-world builder events.
 
-## 📦 Codebase Setup & Usage
+---
 
-### 1️⃣ Installation
+## 🚀 Getting Started
 
-Make sure you have Node.js and npm installed on your system. If not, you can install npm using the following command:
+### 1️⃣ Clone the Framework
 
 ```bash
-curl -qL https://www.npmjs.com/install.sh | sh
+git clone https://github.com/yourusername/stratlens-framework.git
+cd stratlens-framework
 ```
 
-Next, clone the repository and install the necessary dependencies:
+### 2️⃣ Install Dependencies
 
 ```bash
-git clone https://github.com/yourusername/stratlens.git
-cd stratlens
 npm install
 ```
 
-### 2️⃣ API Usage Examples
+### 3️⃣ Start Local Development
 
-#### 🔍 GET Method: Fetching Audit Results
+```bash
+npm run dev
+```
+
+---
+
+## 🧪 How It Works
+
+1. **Data Input**
+
+   * Users provide token details (name, supply, team info, optional contract address).
+2. **AI Agent Layer**
+
+   * Validates inputs using API and custom logic.
+   * Cross-checks LP status, ownership, and token locks.
+3. **Audit Output**
+
+   * Generates a summary audit report.
+   * Assigns a trust score (0–100) with highlighted risk factors.
+
+Reports can be exported in **Markdown**, **JSON**, or **PDF** for easy sharing.
+
+---
+
+## 🔧 API Usage
+
+### 🔍 Check Audit Status
 
 ```javascript
 fetch('https://api.stratlens.io/audit/status?auditId=YOUR_AUDIT_ID', {
   method: 'GET',
-  headers: {
-    'Authorization': 'Bearer YOUR_API_KEY'
-  }
-})
-  .then(response => response.json())
-  .then(data => console.log('✅ Audit Status:', data))
-  .catch(error => console.error('❌ Error Fetching Audit:', error));
+  headers: { 'Authorization': 'Bearer YOUR_API_KEY' }
+}).then(res => res.json()).then(data => console.log('✅ Audit Status:', data));
 ```
 
-#### 🔒 POST Method: Requesting an Audit
+### 🔒 Request a New Audit
 
 ```javascript
 fetch('https://api.stratlens.io/audit', {
@@ -64,37 +84,60 @@ fetch('https://api.stratlens.io/audit', {
     projectName: 'Your Project Name',
     tokenSymbol: 'YOURTOKEN',
     totalSupply: 1000000000,
-    contractAddress: '0x1234...5678'
+    contractAddress: 'So1aNa...XYZ'
   }),
-})
-  .then(response => response.json())
-  .then(data => console.log('✅ Audit Successful:', data))
-  .catch(error => console.error('❌ Audit Error:', error));
+}).then(res => res.json()).then(data => console.log('✅ Audit Complete:', data));
 ```
 
-### 3️⃣ Using Stratlens Locally (CLI Tool)
+---
 
-```bash
-npx stratlens init
-npx stratlens audit --project "Your Project Name" --symbol "YOURTOKEN" --supply 1000000000
+## 🧩 File Structure
+
+```plaintext
+/stratlens-framework
+├── /src          # Core audit agent logic
+├── /prompts      # Custom audit templates
+├── /utils        # Scoring & risk logic
+├── /api          # REST API handlers
+├── /output       # Markdown / PDF report templates
+├── /docs         # Web-integrated documentation
 ```
 
-## 🌟 Hackathon Proven:
+---
 
-* **Breakout Hackathon (Colosseum):** Security & Infra Track.
-* **Seoulana Hackathon (Superteam Korea):** Developer Tooling Track.
-* **\[REDACTED] Hackathon (Helius Labs):** Analytics & Forensics Track.
+## 🏆 Built for Real-World Use
 
-## 🌱 Early-Stage Backing:
+Stratlens has been rigorously tested across multiple hackathons:
 
-Proudly backed by Faction VC, supporting our mission to deliver secure, scalable audit solutions.
+* ✅ **Breakout Hackathon (Colosseum)** - Security & Infra Track
+* ✅ **Seoulana Hackathon (Superteam Korea)** - Dev Tooling Track
+* ✅ **\[REDACTED] Hackathon (Helius Labs)** - Analytics & Forensics
 
-## 📈 Future Plans:
+---
 
-* Advanced scoring plugin with dynamic thresholds.
-* Verified Partner Program for trusted project badges.
-* Integration with launchpads and NFT marketplaces.
+## 💼 Backed by Faction VC
 
-## 📩 Contact:
+Stratlens is supported by [Faction VC](https://faction.vc), a venture firm committed to high-impact Web3 infrastructure and developer tools.
 
-For support, access to API keys, or custom integrations, reach out at [hello@stratlens.io](mailto:hello@stratlens.io).
+---
+
+## 🔭 Roadmap
+
+* 🔁 Advanced Scoring Plugin (Threshold-Based Models)
+* ✅ Verified Partner Badges
+* 💬 On-Chain Audit Badge API
+* 🤖 Bot Extensions (Discord/Telegram)
+* 🧠 GPT-Native Plugin Version
+
+---
+
+## 📩 Contact & Community
+
+* 🌐 Website: [stratlens.xyz](https://stratlens.xyz)
+* 🐦 Twitter: [@StratlensAI](https://x.com/StratlensAI)
+* 📬 Email: [hello@stratlens.io](mailto:hello@stratlens.io)
+
+---
+
+> Built during hackathons. Released for real builders.
+> Deploy your own audit a
