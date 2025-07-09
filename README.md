@@ -140,4 +140,4 @@ Stratlens is supported by [Faction VC](https://faction.vc), a venture firm commi
 ---
 
 > Built during hackathons. Released for real builders.
-> Deploy your own audit a
+> Deploy your own audit through other platfroms
