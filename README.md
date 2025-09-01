@@ -3,7 +3,6 @@
 [![Website](https://img.shields.io/badge/Website-stratlens.xyz-blue)](https://stratlens.xyz)
 [![Twitter](https://img.shields.io/badge/Twitter-@StratlensAI-1DA1F2?logo=twitter)](https://x.com/StratlensAI)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-
 Stratlens is an advanced, modular AI Audit Agent Framework designed for the Solana ecosystem. It empowers developers, founders, and DAOs to deploy token-specific audit agents capable of generating real-time trust scores and human-readable risk reports using live data and custom prompts — without requiring wallet connections or manual intervention.
 ## ⚡ Key Features
 
