@@ -1,5 +1,4 @@
 # 🧠 Evoverse — AI Audit Agent Framework for Solana
-
 [![Website](https://img.shields.io/badge/Website-stratlens.xyz-blue)](https://stratlens.xyz)
 [![Twitter](https://img.shields.io/badge/Twitter-@StratlensAI-1DA1F2?logo=twitter)](https://x.com/StratlensAI)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
