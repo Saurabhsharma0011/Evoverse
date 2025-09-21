@@ -13,7 +13,6 @@ Stratlens is an advanced, modular AI Audit Agent Framework designed for the Sola
 * **Proven Through Hackathons**: Refined across multiple real-world builder events.
 
 --
-
 ## 🚀 Getting Started
 
 ### 1️⃣ Clone the Framework
